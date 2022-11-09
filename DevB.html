@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: #000;
+    }
+    body{
+        background-image: url(./imagens/pexels-sevenstorm-juhaszimrus-891030.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        font-family: VT323, monospace;
+        color: #f3f3f3;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 30px;
+    }
+    .cartao{
+        background-color: #070d12;
+        width: 370px;
+        border: 2px solid #e126d9;
+        border-radius: 10px;
+        overflow: hidden;
+
+    }
+    
+    .abas img{
+        width: 30px;
+
+    }
+    
+    .cartao .minhas-informacoes{
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px
+        ;
+
+    }
+    .cartao .minhas-informacoes img{
+        width: 96px;
+        height: 96px;
+        border-radius: 50px;
+        border: 4px solid #02d08f;
+    }
+   .cartao .minhas-informacoes .nome{
+    font-size: 26px;
+   }
+    .cartao .minhas-informacoes .cargo{
+        font-size: 20px;
+        color: #b8bbc5;
+    }
+    .cartao .conteudo{
+        margin-top: 15px;
+    }
+    .cartao .abas{
+        display: flex;
+    }
+    .cartao .abas .aba{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        cursor: pointer;
+        transition:background-color 0.2s ease-in-out;
+    
+
+    }
+    .cartao .abas img{
+        width: 30px;
+    }
+    .cartao .abas .aba.selecionado{
+        background-color: #262626;
+    }
+    .cartao .informacoes-abas{
+        background-color: #262626;
+    }
+    .cartao .abas .aba:hover{
+        background-color:#414141;
+
+    }
+    .conteudo .abas{
+        justify-content: center;
+    }
+    .informacoes-abas .informacao{
+        min-height:260px;
+        padding: 15px;
+        display: none;
+    }
+    .informacoes-abas .informacao.selecionado{
+        display: block;
+    }
+    .informacoes-abas .sub-titulo{
+        font: size 22px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .informacoes-abas .descricao{
+        font-size: 20px;
+        max-height: 180px;
+        overflow-y: auto;
+        padding-right: 15px;
+    }
+    .informacoes-abas .descricao span{
+        color: #02d08f;
+    }
+    .redes-sociais{
+        display: flex;
+        flex-direction: column;/*fica embaixo de outro*/
+        gap: 25px;
+        align-items: center;
+        max-height: 180px;
+        overflow-y: auto;
+        
+    }
+    .redes-sociais li a{
+        width: 250px;
+        display: block;
+        color: #f3f3f3;
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+        opacity: 0.3s ease-in-out;
+        
+    }
+    .redes-sociais .curriculo{
+        background-color: #06c185;
+    }
+    .redes-sociais .linkedin{
+        background-color:#1d87bd;
+    }
+    .redes-sociais .github{
+        background-color: #545454;
+    }
+    .redes-sociais li a:hover{
+        opacity: 0.8;
+    }
+</style>
+    <title>Portfólio</title>
+</head>
+<body>
+    <main class="cartao">
+        <div class="minhas-informacoes">
+            <img src="imagens/bunet.jpg" alt="foto perfil">
+            <h1 class="nome" style="font-family: 'VT323', monospace;">Bunet Exatus</h1>
+            <h2 class="cargo" >Desenvolvedor Frontend Junior</h2>
+        </div> 
+        <div class="conteudo">
+            <ul class=" abas">
+                <li class="aba selecionado" id="sobre-mim"> <img src="imagens/1AOh.gif" alt="icone sobre mim"></li> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                <li class="aba" id="minhas-redes" ><img src="imagens/3AEB.gif" alt="icone de redes sociais"></li>
+            </ul>
+
+            <div class="informacoes-abas">
+                <div class="informacao selecionado" id="informacao-sobre-mim">
+                    <h3 class="sub-titulo">Sobre</h3>
+
+                    <div class="descricao">
+                        <p>Salut! Meu Nome é Bunet Exatus, Seja bem-vimdo(a)</p>
+
+                        <p>Eu sou uma pessoa apaixonada pela programação desde que tinha terminado meu ensino médio. Sempre eu tive o sonho de trabalhar com programação e atualmente começo a colocar esse sonho em prática estudando o curso de <span>DESENVOLVIMENTO DE SISTEMAS</span> Eu gosto muito de estudar, e gosto demais feijoada, meus hobbies são tocar teclado, ler a Biblia. </p>
+                    </div>
+                
+                </div>
+
+                <div class="informacao">
+                    <h3 class="sub-titulo"> Minhas redes</h3>
+
+                    <ul class="redes-sociais">
+                        <li> <a href="https://www.linkedin.com/in/bunet-exatus-7236ab140/edit/forms/summary/new/?profileFormEntryPoint=PROFILE_SECTION" class="curriculo"></a>Curriculo</li>
+                        <li><a href="https://www.linkedin.com/in/bunet-exatus-7236ab140/" class="linkedin"></a>LinkedIn</li>
+                        <li><a href="https://github.com/bunit509/bunit509" target="_blank" class="github"></a>GitHub</li>
+                    </ul>
+                </div>
+            
+            </div>   
+        </div>  
+          
+    </main>
+    
+    <script>
+    /*OBJETIVO: quando clicarmos na baba temos que mostrar o conteudo da aba que foi clicada pelo usuario e esconder o vonteudo da aba anterior
+    
+    passo1: dar um jeito de pegar os elementos que representam asa abas no HTML
+    
+    passo2: dar um jeito de identificar o clique no elemento da aba
+    
+    passo3: quando o usuario clicar, desmarcar a aba seleciona
+    
+    passo4: marcar a aba clicada como selecionado
+    
+    passo5: esconder o conteudo anterior
+    
+    passo6: mostrar o conteudo da aba selecionada*/
+
+    //passo1: dar um jeito de pegar os elementos que representam asa abas no HTML
+
+   const abas= document.querySelectorAll(".aba")
+
+   //passo2: dar um jeito de identificar o clique no elemento da aba
+
+   abas.forEach(aba=>{
+    aba.addEventListener("click", function(){
+
+        if(aba.classList.contains("selecionado")){
+            return;
+        }
+
+    //passo3: quando o usuario clicar, desmarcar a aba seleciona
+
+    const abaSelecionada = document.querySelector("aba.selecionado");
+    abaSelecionada.classList.remove("selecionado");
+
+    // passo4: marcar a aba clicada como selecionado
+
+    aba.classList.add("selecionado");
+
+    // passo5: esconder o conteudo anterior
+
+    const informacaoSelecionada = document.querySelector("informacao.selecionado");
+    informacaoSelecionada.classList.remove("selecionado");
+
+    //passo6: mostrar o conteudo da aba selecionada
+
+    const idDoElementoDeInformacoesDaAba = `informacao-${aba.id}`
+
+    const idDoElementoASerMostrada = document.getElementById(idDoElementoDeInformacoesDaAba)
+    informacaoASerMostrada.classList.add("selecionado")
+    
+
+
+
+
+
+
+
+
+    })
+   })
+    </script>
+</body>
+</html>
